@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>aom jally - Official Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* 1. ส่วนผสมสี (Variables) - ปรับตามโทนที่ชอบ */
+:root {
+  --bg-creamy: #FFFDF9; /* ขาวครีมมุก */
+  --pink-pastel: #FFD1DC; /* ชมพูพาสเทล */
+  --brown-soft: #8D6E63; /* น้ำตาลพาสเทล */
+  --white: #ffffff;
+  --shadow: rgba(255, 209, 220, 0.5);
+}
+
+/* 2. ตั้งค่าพื้นฐาน */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Mitr', sans-serif; }
+body { background: var(--bg-creamy); color: var(--brown-soft); display: flex; justify-content: center; padding: 20px; }
+
+.container { max-width: 450px; width: 100%; }
+
+/* 3. Header แบบลอย (คงโครงสร้างเดิมไว้ 100%) */
+.profile-card {
+  background: var(--white);
+  border-radius: 30px;
+  padding: 30px 20px;
+  text-align: center;
+  border: 3px solid var(--pink-pastel);
+  margin-bottom: 25px;
+  box-shadow: 0 10px 0 var(--pink-pastel);
+}
+
+.logo-circle {
+  width: 110px; height: 110px;
+  border-radius: 50%;
+  border: 5px solid var(--pink-pastel);
+  margin: 0 auto 15px;
+  overflow: hidden;
+}
+.logo-circle img { width: 100%; height: 100%; object-fit: cover; }
+
+/* เพิ่มส่วน Badges ตามเงื่อนไข */
+.badges-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+.badge-item {
+  background: #FFF5F7;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  border: 1px solid var(--pink-pastel);
+  color: var(--brown-soft);
+}
+
+/* เพิ่ม Status Bar ตามเงื่อนไข */
+.status-bar {
+  background: #fdfdfd;
+  border: 2px dashed var(--pink-pastel); /* ปุ่มแบบเส้นประตามเงื่อนไข */
+  padding: 10px;
+  border-radius: 15px;
+  margin-top: 15px;
+  font-size: 13px;
+  color: var(--brown-soft);
+  text-decoration: none;
+  display: block;
+}
+
+/* 4. ระบบตาราง (The Grid) - คงไว้ 100% */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.menu-item {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--brown-soft);
+  border: 2px solid #FEEAF0;
+  transition: 0.3s;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  border-color: var(--pink-pastel);
+  background: #FFF5F7;
+}
+
+.menu-item span { font-size: 24px; display: block; margin-bottom: 5px; }
+.menu-item p { font-size: 14px; font-weight: 500; }
+
+/* ส่วนราคาและขั้นตอน */
+.info-section {
+  background: var(--white);
+  border-radius: 25px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #FEEAF0;
+}
+.info-title { font-size: 16px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.price-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px; }
+.step-item { font-size: 13px; margin-bottom: 6px; padding-left: 10px; border-left: 2px solid var(--pink-pastel); }
+
+/* 5. แถบยาว (Wide Bar) */
+.wide-bar {
+  background: var(--pink-pastel);
+  color: white;
+  padding: 15px;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+  margin-top: 10px;
+  box-shadow: 0 4px 15px var(--shadow);
+}
+
+.footer-text { text-align: center; font-size: 12px; margin-top: 30px; opacity: 0.6; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="profile-card">
+    <div class="logo-circle">
+      <img src="https://drive.google.com/uc?export=view&id=1ZG95qCNELd14gRUHfjxvrphg2Oumvwhk" alt="logo">
+    </div>
+    <h2>aom jally 🎀</h2>
+    <p style="font-size: 14px; opacity: 0.9;">ร้านออมรับทำเว็บครบวงจรเลยคั้บบ ทำทุกแบบ ทุกสไตล์เลยย⭐️</p>
+    
+    <div class="badges-container">
+      <div class="badge-item">🌷 เว็บพรีเมียม</div>
+      <div class="badge-item">🪷 รับเติมเกมส์</div>
+      <div class="badge-item">🌺 รับทำป้าย</div>
+    </div>
+
+    <a href="https://curly-king-1f34.aomjaejelly.workers.dev" class="status-bar">
+      ⏱️ เช็คคิวงาน: ปกติ (รอ 4-8 ชม.) | <b>ดูผลงานคลิก</b>
+    </a>
+  </div>
+
+  <div class="menu-grid">
+    <a href="https://curly-king-1f34.aomjaejelly.workers.dev" class="menu-item">
+      <span>✨</span>
+      <p>Example 1</p>
+    </a>
+    <a href="https://purple-dream-3aac.aomjaejelly.workers.dev" class="menu-item">
+      <span>☁️</span>
+      <p>Example 2</p>
+    </a>
+    <a href="https://plain-term-c064.aomjaejelly.workers.dev" class="menu-item">
+      <span>🌸</span>
+      <p>Example 3</p>
+    </a>
+    <a href="https://billowing-shape-6bf7.aomjaejelly.workers.dev" class="menu-item">
+      <span>⭐</span>
+      <p>Example 4</p>
+    </a>
+  </div>
+
+  <div class="info-section">
+    <h3 class="info-title">💰 ราคาสตาร์ท</h3>
+    <div class="price-row"><span>ไม่เกิน 200 lines + โลโก้</span> <b>129 ฿</b></div>
+    <div class="price-row"><span>เกิน 200 lines</span> <b>เริ่มต้น 139 ฿</b></div>
+    <div class="price-row"><span>เกิน 400 lines</span> <b>เริ่มต้น 179 ฿</b></div>
+    <div class="price-row"><span>เกิน 600 lines</span> <b>เริ่มต้น 249 ฿</b></div>
+    <p style="font-size: 11px; color: #ff8da1; margin-top: 5px;">* งานเร่ง คิดราคา *2 ของราคาปกติ</p>
+  </div>
+
+  <div class="info-section">
+    <h3 class="info-title">📝 ขั้นตอนการสั่ง</h3>
+    <div class="step-item">1. กรอกฟอร์ม เขียนรายละเอียดร้านค้า</div>
+    <div class="step-item">2. ใส่ลิงก์ตัวอย่างงาน & แนบโลโก้</div>
+    <div class="step-item">3. ส่งงานให้เช็ค แจ้งยอด และชำระเงิน</div>
+    <div class="step-item">4. รอรับลิงก์งานได้เลย</div>
+  </div>
+
+  <div class="info-section" style="border-style: dashed;">
+    <h3 class="info-title">🎁 ของตกแต่งร้าน</h3>
+    <a href="https://shorturl.asia/zs4PU" style="text-decoration:none; color:inherit; font-size:13px; display:block; margin-bottom:5px;">🎀 sowpuffpieny (Click)</a>
+    <a href="https://drive.google.com/drive/folders/1sEnjcGHtphQq-h7QjWc_7iHnYPdvh2az" style="text-decoration:none; color:inherit; font-size:13px; display:block;">☘️ กลุ่ม Baby Muffy (Click)</a>
+  </div>
+
+  <div style="padding: 0 10px; margin-bottom: 20px;">
+    <p style="font-size: 12px; color: #e57373;">📍 <b>กฎของร้าน:</b> โอนแล้วไม่คืนเงินทุกกรณี / ยกเลิกหลังเช็คงานไม่คืนเงินและส่งงานปกติ</p>
+  </div>
+
+  <a href="https://lin.ee/5FDcHu5" class="wide-bar">ติดต่อสั่งงานทาง LINE 🎀</a>
+  <a href="https://www.facebook.com/share/18Suk49EX1/" class="wide-bar" style="background:#fff; color:var(--pink-pastel); border: 2px solid var(--pink-pastel); margin-top:10px;">Facebook Fanpage</a>
+
+  <div class="footer-text">© 2026 aom jally studio | All Rights Reserved</div>
+</div>
+
+</body>
+</html>
